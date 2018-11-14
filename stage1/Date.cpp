@@ -128,11 +128,11 @@ Date Date::stringToDate(std::string dateString) {
     }
     cout << year << " " << month << " " << day << " " << hour << " " << minute << endl;
     year_ = year;
-	month_ = month;
-	day_ = day;
-	hour_ = hour;
-	minute_ = minute;
-	return *this;
+    month_ = month;
+    day_ = day;
+    hour_ = hour;
+    minute_ = minute;
+    return *this;
 }
 
 std::string Date::dateToString(Date date) {
