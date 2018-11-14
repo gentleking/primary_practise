@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>C++ 风格指南 - 内容目录 &mdash; Google 开源项目风格指南</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="0. 扉页" href="../" />
+    <link rel="prev" title="Google 开源项目风格指南 (中文版)" href="../../" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+
+<!-- RTD Extra Head -->
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/" />
+
+<link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="text/javascript" src="../../_static/readthedocs-data.js"></script>
+
+<!-- Add page-specific data, which must exist in the page js, not global -->
+<script type="text/javascript">
+READTHEDOCS_DATA['page'] = 'google-cpp-styleguide/contents'
+READTHEDOCS_DATA['source_suffix'] = '.rst'
+</script>
+
+<script type="text/javascript" src="https://media.readthedocs.org/javascript/readthedocs-analytics.js"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents/" class="icon icon-home"> Google 开源项目风格指南
+          
+
+          
+          </a>
+
+          
+            
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../">Google 开源项目风格指南 (中文版)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">C++ 风格指南 - 内容目录</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../">0. 扉页</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../headers/">1. 头文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scoping/">2. 作用域</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/">3. 类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/">4. 函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../magic/">5. 来自 Google 的奇技</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/">6. 其他 C++ 特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/">7. 命名约定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comments/">8. 注释</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/">9. 格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exceptions/">10. 规则特例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../end/">11. 结束语</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../google-objc-styleguide/contents/">Objective-C 风格指南 - 内容目录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google-python-styleguide/contents/">Python 风格指南 - 内容目录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google-shell-styleguide/contents/">Shell 风格指南 - 内容目录</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents/">Google 开源项目风格指南</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents/">Docs</a> &raquo;</li>
+        
+      <li>C++ 风格指南 - 内容目录</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/zh-google-styleguide/zh-google-styleguide/blob/master/./google-cpp-styleguide/contents.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="c">
+<span id="cpp-contents"></span><h1>C++ 风格指南 - 内容目录</h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#c" id="id1">C++ 风格指南 - 内容目录</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../">0. 扉页</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../#id2">0.1 译者前言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../#id4">0.2 背景</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../headers/">1. 头文件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../headers/#self-contained">1.1. Self-contained 头文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../headers/#define">1.2. #define 保护</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../headers/#forward-declarations">1.3. 前置声明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../headers/#inline-functions">1.4. 内联函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../headers/#include">1.5. <code class="docutils literal notranslate"><span class="pre">#include</span></code> 的路径及顺序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../headers/#yulefox">译者 (YuleFox) 笔记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../headers/#acgtyrant">译者（acgtyrant）笔记</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scoping/">2. 作用域</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../scoping/#namespaces">2.1. 命名空间</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scoping/#unnamed-namespace-and-static-variables">2.2. 匿名命名空间和静态变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scoping/#nonmember-static-member-and-global-functions">2.3. 非成员函数、静态成员函数和全局函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scoping/#local-variables">2.4. 局部变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scoping/#static-and-global-variables">2.5. 静态和全局变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scoping/#yulefox">译者 (YuleFox) 笔记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scoping/#acgtyrant">译者（acgtyrant）笔记</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/">3. 类</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#id2">3.1. 构造函数的职责</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#implicit-conversions">3.2. 隐式类型转换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#copyable-and-movable-types">3.3. 可拷贝类型和可移动类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#vs">3.4. 结构体 VS. 类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#inheritance">3.5. 继承</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#multiple-inheritance">3.6. 多重继承</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#interface">3.7. 接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#id10">3.8. 运算符重载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#access-control">3.9. 存取控制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#declaration-order">3.10. 声明顺序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/#yulefox">译者 (YuleFox) 笔记</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/">4. 函数</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/#id2">4.1. 参数顺序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/#id3">4.2. 编写简短函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/#id4">4.3. 引用参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/#function-overloading">4.4. 函数重载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/#id6">4.5. 缺省参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/#id7">4.6. 函数返回类型后置语法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../magic/">5. 来自 Google 的奇技</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../magic/#id1">5.1. 所有权与智能指针</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../magic/#cpplint">5.2. Cpplint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../magic/#acgtyrant">译者（acgtyrant）笔记</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../others/">6. 其他 C++ 特性</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../others/#id1">6.1. 引用参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#id2">6.2. 右值引用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#function-overloading">6.3. 函数重载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#id4">6.4. 缺省参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#alloca">6.5. 变长数组和 alloca()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#id5">6.6. 友元</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#exceptions">6.7. 异常</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#rtti">6.8. 运行时类型识别</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#id8">6.9. 类型转换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#streams">6.10. 流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#id10">6.11. 前置自增和自减</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#const">6.12. <code class="docutils literal notranslate"><span class="pre">const</span></code> 用法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#constexpr">6.13. <code class="docutils literal notranslate"><span class="pre">constexpr</span></code> 用法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#id11">6.14. 整型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#id12">6.15. 64 位下的可移植性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#preprocessor-macros">6.16. 预处理宏</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#nullptr-null">6.17. 0, <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> 和 <code class="docutils literal notranslate"><span class="pre">NULL</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#sizeof">6.18. sizeof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#auto">6.19. auto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#braced-initializer-list">6.20. 列表初始化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#lambda">6.21. Lambda 表达式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#template-metaprogramming">6.22. 模板编程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#boost">6.23. Boost 库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#c-11">6.24. C++11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../others/#acgtyrant">译者（acgtyrant）笔记</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../naming/">7. 命名约定</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#general-naming-rules">7.1. 通用命名规则</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#id3">7.2. 文件命名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#type-names">7.3. 类型命名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#variable-names">7.4. 变量命名</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../naming/#id6">普通变量命名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../naming/#id7">类数据成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../naming/#id8">结构体变量</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#constant-names">7.5. 常量命名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#function-names">7.6. 函数命名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#id12">7.7. 命名空间命名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#id13">7.8. 枚举命名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#macro-names">7.9. 宏命名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#id15">7.10. 命名规则的特例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naming/#acgtyrant">译者（acgtyrant）笔记</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../comments/">8. 注释</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../comments/#id2">8.1. 注释风格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comments/#id3">8.2. 文件注释</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comments/#id4">法律公告和作者信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comments/#id5">文件内容</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comments/#class-comments">8.3. 类注释</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comments/#id7">8.4. 函数注释</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comments/#id8">函数声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comments/#id9">函数定义</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comments/#id10">8.5. 变量注释</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comments/#id11">类数据成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comments/#id12">全局变量</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comments/#id13">8.6. 实现注释</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comments/#id14">代码前注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comments/#id15">行注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comments/#id16">函数参数注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comments/#id17">不允许的行为</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comments/#id18">8.8. 标点, 拼写和语法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comments/#todo">8.8. TODO 注释</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comments/#id19">8.9. 弃用注释</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comments/#yulefox">译者 (YuleFox) 笔记</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../formatting/">9. 格式</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#line-length">9.1. 行长度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#ascii">9.2. 非 ASCII 字符</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id3">9.3. 空格还是制表位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id4">9.4. 函数声明与定义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#lambda">9.5. Lambda 表达式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#function-calls">9.6. 函数调用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#braced-initializer-list-format">9.7. 列表初始化格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id7">9.9. 条件语句</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id8">9.9. 循环和开关选择语句</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id9">9.10. 指针和引用表达式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id10">9.11. 布尔表达式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id11">9.12. 函数返回值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id12">9.13. 变量及数组初始化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id13">9.14. 预处理指令</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id14">9.15. 类格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id15">9.16. 构造函数初始值列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id16">9.17. 命名空间格式化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id17">9.19. 水平留白</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../formatting/#id18">通用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../formatting/#id19">循环和条件语句</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../formatting/#id20">操作符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../formatting/#id21">模板和转换</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#id22">9.19. 垂直留白</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#yulefox">译者 (YuleFox) 笔记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatting/#acgtyrant">译者（acgtyrant）笔记</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions/">10. 规则特例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exceptions/#id2">10.1. 现有不合规范的代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exceptions/#windows">10.2. Windows 代码</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../end/">11. 结束语</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../" class="btn btn-neutral float-right" title="0. 扉页" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../" class="btn btn-neutral" title="Google 开源项目风格指南 (中文版)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+      
+        <span class="commit">
+          Revision <code>9d8dce1d</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/en/latest/">latest</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="//readthedocs.org/projects/zh-google-styleguide/downloads/pdf/latest/">pdf</a></dd>
+        
+          <dd><a href="//readthedocs.org/projects/zh-google-styleguide/downloads/htmlzip/latest/">htmlzip</a></dd>
+        
+          <dd><a href="//readthedocs.org/projects/zh-google-styleguide/downloads/epub/latest/">epub</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="//readthedocs.org/projects/zh-google-styleguide/?fromdocs=zh-google-styleguide">Project Home</a>
+          </dd>
+          <dd>
+            <a href="//readthedocs.org/builds/zh-google-styleguide/?fromdocs=zh-google-styleguide">Builds</a>
+          </dd>
+      </dl>
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+
+    </div>
+  </div>
+
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/underscore.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/doctools.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/readthedocs-doc-embed.js"></script>
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
