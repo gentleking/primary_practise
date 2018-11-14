@@ -101,7 +101,33 @@ bool Date::isValid(Date date) {
 }
 
 Date Date::stringToDate(std::string dateString) {
-
+    int i = 0, year = 0, month = 0, day = 0, hour = 0, minute = 0;
+    while(dateString[i] != '-'){
+        year = year * 10 + dateString[i] - '0'; 
+        i++;
+    }
+    i++;
+    while(dateString[i] != '-') {
+	month = month * 1= + dateString[i] - '0';
+	i++;
+    }
+    i++;
+    while(dateString[i] != '/') {
+	day = day * 10 + dateString[i] - '0';
+        i++;    
+    }
+    i++;
+    while(dateString[i] != ':') {
+	hour = hour * 10 + dateString[i] - '0';
+        i++;  
+    }
+    i++;
+    while(dateString[i] != '\0') {
+	minute = minute * 10 + dateString[i] - '0';
+        i++;
+    }
+    cout << year << " " << month << " " << day << " " << hour << " " << minute << endl;
+    
 }
 
 std::string Date::dateToString(Date date) {
