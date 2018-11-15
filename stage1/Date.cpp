@@ -9,26 +9,26 @@ using namespace std;
 int MONTH[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
 bool isLeapYear(int year) {
-	if((year%4==0 && year%100!=0) || year%400==0) {
-		return true;
-	}
-	return false;
+    if ((year%4 == 0 && year%100 != 0) || year%400 == 0) {
+        return true;
+    }
+    return false;
 }
 
-Date::Date(){
-	year_ = 1000;
-	month_ = 1;
-	day_ = 1;
-	hour_ = 0;
-	minute_ = 0;
+Date::Date() {
+    year_ = 1000;
+    month_ = 1;
+    day_ = 1;
+    hour_ = 0;
+    minute_ = 0;
 }
 
 Date::Date(int year, int month, int day, int hour, int minute) {
-	year_ = year;
-	month_ = month;
-	day_ = day;
-	hour_ = hour;
-	minute_ = minute;
+    year_ = year;
+    month_ = month;
+    day_ = day;
+    hour_ = hour;
+    minute_ = minute;
 }
 
 int Date::getYear(void) const {
@@ -88,14 +88,14 @@ bool Date::isValid(Date date) {
 		}
 	}
 	else {
-		if(date.day_ < 0 || date.day_ > MONTH[date.month_-1]) {
+		if(date.day_ <= 0 || date.day_ > MONTH[date.month_-1]) {
             return false;
         }
     }
     if(date.hour_ < 0 || date.hour_ > 23) {
 		return false;
 	}
-	if(date.minute_ < 0 || date.hour_ > 59) {
+	if(date.minute_ < 0 || date.minute_ > 59) {
 		return false;
 	}
 	return true;
