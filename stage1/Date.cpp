@@ -127,12 +127,6 @@ Date Date::stringToDate(std::string dateString) {
 	minute = minute * 10 + dateString[i] - '0';
         i++;
     }
-//    cout << year << " " << month << " " << day << " " << hour << " " << minute << endl;
-//    year_ = year;
-//    month_ = month;
-//    day_ = day;
-//    hour_ = hour;
-//    minute_ = minute;
     return Date(year, month, day, hour, minute);
 }
 
@@ -163,34 +157,98 @@ std::string Date::dateToString(Date date) {
     else {
         temp += ":" + to_string(date.minute_);
     }
-//    temp = temp + "-" + to_string(month_);
-//    temp = temp + "-" + to_string(day_);
-//    temp = temp + "/" + to_string()
     return temp;
 }
 
 Date &Date::operator=(const Date& date) {
-
+    year_ = date.getYear();
+    month_ = date.getMonth();
+    day_ = date.getDay();
+    hour_ = date.getHour();
+    minute_ = date.getMinute();
+    return *this;
 }
 
 bool Date::operator==(const Date& date) const {
-
+    return year_ == date.getYear() && month_ == date.getMonth() && \
+           day_ == date.getDay() && hour_ == date.getHour() && \
+           minute_ == date.getMinute();
 }
 
 bool Date::operator>(const Date& date) const {
-
+    if(year_ > date.getYear()) {
+        return true;
+    }
+    else if(year_ < date.getYear()) {
+        return false;
+    }
+    else if(month_ > date.getMonth()) {
+        return true;
+    }
+    else if(month_ < date.getMonth()) {
+        return false;
+    }
+    else if(day_ > date.getDay()) {
+        return true;
+    }
+    else if(day_ < date.getDay()) {
+        return false;
+    }
+    else if(hour_ > date.getHour()) {
+        return true;
+    }
+    else if(hour_ < date.getHour()) {
+        return false;
+    }
+    else if(minute_ > date.getMinute()) {
+        return true;
+    }
+    else if(minute_ < date.getMinute()) {
+        return false;
+    }
+    return false;
 }
 
 bool Date::operator<(const Date& date) const {
-
+    if(year_ > date.getYear()) {
+        return false;
+    }
+    else if(year_ < date.getYear()) {
+        return true;
+    }
+    else if(month_ > date.getMonth()) {
+        return false;
+    }
+    else if(month_ < date.getMonth()) {
+        return true;
+    }
+    else if(day_ > date.getDay()) {
+        return false;
+    }
+    else if(day_ < date.getDay()) {
+        return true;
+    }
+    else if(hour_ > date.getHour()) {
+        return false;
+    }
+    else if(hour_ < date.getHour()) {
+        return true;
+    }
+    else if(minute_ > date.getMinute()) {
+        return false;
+    }
+    else if(minute_ < date.getMinute()) {
+        return true;
+    }
+    return false;
 }
 
 bool Date::operator>=(const Date& date) const {
-
+    return *this > date || *this == date;
 }
 
 bool Date::operator<=(const Date& date) const {
-
+    return *this < date || *this == date;
 }
 
 /*
