@@ -36,7 +36,16 @@ int main() {
     string str2 = "1058-12-10/23:5";
     d1 = Date::stringToDate(str1);
     d2 = Date::stringToDate(str2);
+//    printDate(Date::stringToDate(str1));
+//    printDate(Date::stringToDate(str2));
     printDate(d1);
     printDate(d2);
+    if(d1 > d2)    cout << "d1 > d2" << endl;
+    if(d1 < d2)    cout << "d1 < d2" << endl;
+    if(d1 == d2)    cout << "d1 == d2" << endl;
+    d2 = Date::stringToDate(str1);
+    if(d1 == d2)    cout << "d1 == d2" << endl;
+    if(d1 >= d2)    cout << "d1 >= d2" << endl;
+    if(d1 <= d2)    cout << "d1 <= d2" << endl;
     return 0;
 }
